@@ -5,6 +5,11 @@
 	<version>0.0.1</version>
 	<packaging>war</packaging>
 	<name>servlet_Study_20230331</name>
+	
+	<properties>
+		<m2eclipse.wtp.contextRoot>/</m2eclipse.wtp.contextRoot>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
