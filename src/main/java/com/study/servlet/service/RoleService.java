@@ -1,5 +1,7 @@
 package com.study.servlet.service;
 
+import com.study.servlet.entity.Role;
+
 public interface RoleService {
-	public boolean duplicatedRoleName(String rolename);
+	public Role getRole(String rolename);
 }

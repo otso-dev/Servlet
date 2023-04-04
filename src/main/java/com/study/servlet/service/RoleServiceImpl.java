@@ -21,13 +21,10 @@ public class RoleServiceImpl implements RoleService{
 		roleRepository = RoleRepositoryImpl.getInstance();
 	}
 
-	
 	@Override
-	public boolean duplicatedRoleName(String rolename) {
+	public Role getRole(String rolename) {
 		
-		Role role = roleRepository.findByRoleName(rolename);
-		
-		return role != null;
+		return roleRepository.findByRoleName(rolename);
 	}
 
 }
