@@ -53,7 +53,7 @@ public class Auth extends HttpServlet {
 		
 		boolean duplicatedflag = userService.duplicatedUsername(user.getUsername());
 		
-		response.setContentType("application/json:charset=UTF-8");
+		response.setContentType("application/json;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
 		if(duplicatedflag) {

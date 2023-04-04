@@ -1,0 +1,33 @@
+package com.study.servlet.service;
+
+import com.study.servlet.entity.Role;
+import com.study.servlet.repository.RoleRepository;
+import com.study.servlet.repository.RoleRepositoryImpl;
+
+public class RoleServiceImpl implements RoleService{
+	
+	private static RoleService instance;
+	
+	public static RoleService getIntance() {
+		if(instance==null) {
+			instance = new RoleServiceImpl();
+		}
+		return instance;
+	}
+	
+	private RoleRepository roleRepository;
+	
+	private RoleServiceImpl() {
+		roleRepository = RoleRepositoryImpl.getInstance();
+	}
+
+	
+	@Override
+	public boolean duplicatedRoleName(String rolename) {
+		
+		Role role = roleRepository.findByRoleName(rolename);
+		
+		return role != null;
+	}
+
+}
